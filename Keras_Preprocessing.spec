@@ -4,7 +4,7 @@
 #
 Name     : Keras_Preprocessing
 Version  : 1.0.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/b2/f6/375a3648d3cae006b1a08ebd9b9614c1c4b372cce54d11e5870adc45ec19/Keras_Preprocessing-1.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b2/f6/375a3648d3cae006b1a08ebd9b9614c1c4b372cce54d11e5870adc45ec19/Keras_Preprocessing-1.0.1.tar.gz
 Summary  : Easy data preprocessing and data augmentation for deep learning models
@@ -13,9 +13,6 @@ License  : MIT
 Requires: Keras_Preprocessing-python3
 Requires: Keras_Preprocessing-python
 Requires: numpy
-Requires: pytest
-Requires: pytest-cov
-Requires: pytest-xdist
 Requires: scipy
 Requires: six
 BuildRequires : Keras
@@ -61,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528335499
+export SOURCE_DATE_EPOCH=1528565938
 python3 setup.py build -b py3
 
 %install
