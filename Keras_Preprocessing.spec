@@ -4,7 +4,7 @@
 #
 Name     : Keras_Preprocessing
 Version  : 1.0.3
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/be/2c/c9bdd8fe3e2f7f4ea4d8f22f8f556bc38261e9f38b4d426b607e9d60996c/Keras_Preprocessing-1.0.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/be/2c/c9bdd8fe3e2f7f4ea4d8f22f8f556bc38261e9f38b4d426b607e9d60996c/Keras_Preprocessing-1.0.3.tar.gz
 Summary  : Easy data preprocessing and data augmentation for deep learning models
@@ -30,7 +30,7 @@ Keras Preprocessing is the data preprocessing
 %package python
 Summary: python components for the Keras_Preprocessing package.
 Group: Default
-Requires: Keras_Preprocessing-python3
+Requires: Keras_Preprocessing-python3 = %{version}-%{release}
 Provides: keras_preprocessing-python
 
 %description python
@@ -54,12 +54,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534974012
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1538152305
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
