@@ -1,5 +1,5 @@
 PKG_NAME := Keras_Preprocessing
-URL = https://files.pythonhosted.org/packages/6e/bd/1555135d8a54c09cf8eccd4755c3361d043e53f74aeda29f89c0d94fe8b6/Keras_Preprocessing-1.0.6.tar.gz
+URL = https://files.pythonhosted.org/packages/98/35/8d86f3c39374ed6c9ebbeffc2c824b1fad29b62ac5a862b2d5c2e9770ef1/Keras_Preprocessing-1.0.8.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
