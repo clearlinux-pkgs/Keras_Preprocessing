@@ -4,7 +4,7 @@
 #
 Name     : Keras_Preprocessing
 Version  : 1.1.0
-Release  : 23
+Release  : 24
 URL      : https://files.pythonhosted.org/packages/6d/2b/d45a295e6b31d8b6663b705dff2f178ae16e8d2eac41097810a411d7b10f/Keras_Preprocessing-1.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6d/2b/d45a295e6b31d8b6663b705dff2f178ae16e8d2eac41097810a411d7b10f/Keras_Preprocessing-1.1.0.tar.gz
 Summary  : Easy data preprocessing and data augmentation for deep learning models
@@ -32,8 +32,10 @@ BuildRequires : six
 BuildRequires : tensorflow
 
 %description
-# Keras Preprocessing
-[![Build Status](https://travis-ci.org/keras-team/keras-preprocessing.svg?branch=master)](https://travis-ci.org/keras-team/keras-preprocessing)
+Keras Preprocessing is the data preprocessing
+        and data augmentation module of the Keras deep learning library.
+        It provides utilities for working with image data, text data,
+        and sequence data.
 
 %package license
 Summary: license components for the Keras_Preprocessing package.
@@ -64,13 +66,15 @@ python3 components for the Keras_Preprocessing package.
 
 %prep
 %setup -q -n Keras_Preprocessing-1.1.0
+cd %{_builddir}/Keras_Preprocessing-1.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559408261
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1575917512
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -85,7 +89,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Keras_Preprocessing
-cp LICENSE %{buildroot}/usr/share/package-licenses/Keras_Preprocessing/LICENSE
+cp %{_builddir}/Keras_Preprocessing-1.1.0/LICENSE %{buildroot}/usr/share/package-licenses/Keras_Preprocessing/6019559c8c61a5f991dd1f3bd223efa1c6781ef6
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -96,7 +100,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/Keras_Preprocessing/LICENSE
+/usr/share/package-licenses/Keras_Preprocessing/6019559c8c61a5f991dd1f3bd223efa1c6781ef6
 
 %files python
 %defattr(-,root,root,-)
