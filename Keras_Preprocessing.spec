@@ -4,7 +4,7 @@
 #
 Name     : Keras_Preprocessing
 Version  : 1.1.0
-Release  : 25
+Release  : 26
 URL      : https://files.pythonhosted.org/packages/6d/2b/d45a295e6b31d8b6663b705dff2f178ae16e8d2eac41097810a411d7b10f/Keras_Preprocessing-1.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6d/2b/d45a295e6b31d8b6663b705dff2f178ae16e8d2eac41097810a411d7b10f/Keras_Preprocessing-1.1.0.tar.gz
 Summary  : Easy data preprocessing and data augmentation for deep learning models
@@ -33,9 +33,21 @@ BuildRequires : tensorflow
 
 %description
 Keras Preprocessing is the data preprocessing
-        and data augmentation module of the Keras deep learning library.
-        It provides utilities for working with image data, text data,
-        and sequence data.
+and data augmentation module of the Keras deep learning library.
+It provides utilities for working with image data, text data,
+and sequence data.
+
+Read the documentation at: https://keras.io/
+
+Keras Preprocessing may be imported directly
+from an up-to-date installation of Keras:
+
+```
+from keras import preprocessing
+```
+
+Keras Preprocessing is compatible with Python 2.7-3.6
+and is distributed under the MIT license.
 
 %package license
 Summary: license components for the Keras_Preprocessing package.
@@ -59,6 +71,7 @@ python components for the Keras_Preprocessing package.
 Summary: python3 components for the Keras_Preprocessing package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Keras-Preprocessing)
 
 %description python3
 python3 components for the Keras_Preprocessing package.
@@ -73,7 +86,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575917512
+export SOURCE_DATE_EPOCH=1583164262
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
