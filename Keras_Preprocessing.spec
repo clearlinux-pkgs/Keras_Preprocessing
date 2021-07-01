@@ -4,7 +4,7 @@
 #
 Name     : Keras_Preprocessing
 Version  : 1.1.2
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/5e/f1/b44337faca48874333769a29398fe4666686733c8880aa160b9fd5dfe600/Keras_Preprocessing-1.1.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5e/f1/b44337faca48874333769a29398fe4666686733c8880aa160b9fd5dfe600/Keras_Preprocessing-1.1.2.tar.gz
 Summary  : Easy data preprocessing and data augmentation for deep learning models
